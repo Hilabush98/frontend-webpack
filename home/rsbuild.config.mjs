@@ -5,7 +5,7 @@ import { ModuleFederationPlugin } from '@module-federation/enhanced/rspack';
 export default defineConfig({
   plugins: [pluginReact()],
   server: {
-    port: 2000,
+    port: 2001,
   },
   html: {
     template: 'index.html',
