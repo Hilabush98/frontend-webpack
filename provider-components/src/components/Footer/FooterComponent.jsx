@@ -3,14 +3,10 @@ import { Button, Layout, Menu, theme } from 'antd';
 
 const { Header, Sider, Content, Footer } = Layout;
 
-export const FooterComponent = ({ texto = 'Footer' }) => {
+export const FooterComponent = ({ texto = 'Footer' , styleProp}) => {
   return (
     <Footer
-      style={{
-        textAlign: 'center',
-        height: '10vh',
-        backgroundColor: '#fff',
-      }}
+      style={styleProp}
     >
       {texto}
     </Footer>

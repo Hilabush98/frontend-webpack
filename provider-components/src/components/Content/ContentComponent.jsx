@@ -1,18 +1,10 @@
 import React from 'react';
 import { Layout } from 'antd';
 const { Content } = Layout;
-export const ContentComponent = ({ ComponentItem = 'Contenido' }) => {
+export const ContentComponent = ({ ComponentItem = 'Contenido' ,styleProp }) => {
   return (
     <Content
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        textAlign: 'center',
-        justifyContent: 'center',
-        height: '80vh',
-        backgroundColor: '#fff',
-        margin: '0 ',
-      }}
+      style={styleProp}
     >
       <div
         style={{
