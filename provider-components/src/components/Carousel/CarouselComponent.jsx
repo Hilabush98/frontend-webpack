@@ -17,9 +17,11 @@ export const CarouselComponent = () => {
     console.log(currentSlide);
   };
   return (
-    <Carousel afterChange={onChange} autoplay>
+    <>
+        <Carousel className='Carousel' afterChange={onChange} style={{ height:'100%', width:'100%',  display: 'flex',  alignItems: 'center',
+      textAlign: 'center',}}>
       <div>
-        <h3 style={contentStyle}>1</h3>
+      <h3 style={contentStyle}>1</h3>      
       </div>
       <div>
         <h3 style={contentStyle}>2</h3>
@@ -31,6 +33,8 @@ export const CarouselComponent = () => {
         <h3 style={contentStyle}>4</h3>
       </div>
     </Carousel>
+    </>
+
   );
 };
 

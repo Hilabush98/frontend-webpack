@@ -5,7 +5,8 @@ import HeaderComponent from './Header/HeaderComponent.jsx';
 import FooterComponent from './Footer/FooterComponent.jsx';
 import ContentComponent from './Content/ContentComponent.jsx';
 import CarouselComponent from './Carousel/CarouselComponent.jsx';
-import  {Layout}  from 'antd';
+import TableComponent from './Table/TableComponent.jsx';
+import  {Layout,Col, Row, Typography }  from 'antd';
 export {
   Login,
   Home,
@@ -14,5 +15,9 @@ export {
   FooterComponent,
   ContentComponent,
   CarouselComponent,
-  Layout
+  TableComponent,
+  Layout,
+  Col,
+  Row,
+  Typography
 };

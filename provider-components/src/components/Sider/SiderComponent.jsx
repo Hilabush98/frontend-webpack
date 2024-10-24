@@ -1,22 +1,21 @@
 import React, { useState } from 'react';
 import { Layout, Menu, theme } from 'antd';
 import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  UploadOutlined,
   MergeOutlined,
   HddOutlined,
   UserOutlined,
-  VideoCameraOutlined,
   SolutionOutlined,
   HomeOutlined,
   DeploymentUnitOutlined
 } from '@ant-design/icons';
+import { getIcon } from '../../Utils/Icons/getIconFunction';
+
 const { Header, Sider, Content, Footer } = Layout;
+
 
 export const SiderComponent = ({logotipoProps, SiderProps, MenuProps}) => {
   const [collapsed, setCollapsed] = useState(false);
-
+console.log(getIcon('HomeOutLined'))
   return (
     <Sider
       collapsible
@@ -25,29 +24,20 @@ export const SiderComponent = ({logotipoProps, SiderProps, MenuProps}) => {
        breakpoint="lg"
     >
       <div
-        style={{
-          height: '7.5vh',
-          backgroundColor: 'white',
-          margin: '5px',
-          opacity: '50%',
-          justifyContent: 'center',
-          alignItems: 'center',
-          textAlign: 'center',
-          display: 'flex',
-
-        }}
+      style={logotipoProps}
       >
         Logotipo
       </div>
       <Menu
         theme="dark"
-        defaultSelectedKeys={['1']}
+        defaultSelectedKeys={MenuProps?.defaultSelectedKeys||['1']}
         mode="inline"
         items={[
           {
             key: '1',
-            icon: <HomeOutlined />,
+            icon: getIcon('HomeOutlined'),
             label: 'Home',
+            onClick:(e)=>{ location.href = "http://localhost:2001/";}
           },
           {
             key: '2',
@@ -76,6 +66,7 @@ export const SiderComponent = ({logotipoProps, SiderProps, MenuProps}) => {
             key: '4',
             icon: <SolutionOutlined />,
             label: 'Tickets',
+            onClick:(e)=>{ location.href = "http://localhost:2002/";}
           },
           
         ]}
