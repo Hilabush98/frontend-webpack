@@ -32,30 +32,56 @@ const CarouselComponent = lazy(() =>
 );
 
 
-const App = () => {
+const AppTickets = () => {
   return (
 <Layout backgroundColor='#705C53'>
-      <SiderComponent />
+      <SiderComponent logotipoProps={{
+          height: '7.5vh',
+          backgroundColor: '#002140',
+          color:'white',
+          margin: '5px',
+          opacity: '80%',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center',
+          display: 'flex',
+        }}
+        MenuProps={
+          {
+            defaultSelectedKeys:['4']
+          }
+        }
+        />
       <Layout>
-        <HeaderComponent texto="HEADER TEXT"  styleProp={{
+        <HeaderComponent texto="HEADER TEXT" avatarProps={{
+            size:60,
+            style:{  cursor:'pointer'}
+        }} 
+        HeaderProps={{
         height: '8vh',
-        backgroundColor: '#001529',
         width:'100%',
-        padding:0,
+        padding:'0',
       }}/>
         <ContentComponent ComponentItem={<CarouselComponent />}  styleProp ={{
         display: 'flex',
         alignItems: 'center',
         textAlign: 'center',
-        justifyContent: 'center',
-        height: '89vh',
-        backgroundColor: '#F5F5F7',
-        margin: '0 ',
+        height: '84.6vh',
+        backgroundColor: '#001529',
       }}/>
-
+    <FooterComponent  texto={<h1>Footer Tickets</h1>} styleProp ={{
+        display: 'flex',
+        alignItems: 'center',
+        textAlign: 'center',
+        justifyContent: 'center',
+        height: '9vh',
+        backgroundColor: '#001529',
+        margin: '0 ',
+        color:'white'
+      }}/>
       </Layout>
     </Layout>
   );
 };
 
-export default App;
+export default AppTickets;

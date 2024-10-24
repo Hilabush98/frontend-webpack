@@ -40,6 +40,7 @@ export const UserSettingsComponent = ({ avatarProps, cardProps }) => {
       }
     >
       <Avatar
+        props={avatarProps}
         size={avatarProps?.size}
         icon={avatarProps?.icon || getIcon('UserOutlined')}
         style={avatarProps?.style}

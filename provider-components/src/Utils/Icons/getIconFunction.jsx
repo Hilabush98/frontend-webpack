@@ -19,9 +19,10 @@ import {
 } from '@ant-design/icons';
 
 const getIcon = (iconName, iconStyle, keyName) => {
+    console.log(iconName)
     switch (iconName) {
         case 'HomeOutlined':
-            return <HomeOutlined style={iconStyle} key={keyName} />;
+            return <HomeOutlined  style={iconStyle} key={keyName} />;
 
         case 'DeploymentUnitOutlined':
             return <DeploymentUnitOutlined style={iconStyle} key={keyName} />;
