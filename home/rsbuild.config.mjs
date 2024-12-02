@@ -14,7 +14,7 @@ export default defineConfig({
     rspack: {
       output: {
         uniqueName: 'federation_consumer',
-        publicPath: 'auto',
+        publicPath: 'http://localhost:2001/', // desarrollo
       },
       plugins: [
         new ModuleFederationPlugin({
@@ -23,7 +23,8 @@ export default defineConfig({
             federation_provider:
               'federation_provider@http://localhost:3000/mf-manifest.json', // dev
 
-            // federation_provider: 'federation_provider@http://localhost/provider-components/remoteEntry.js', // prod
+            //federation_provider:
+            //'federation_provider@http://localhost:8080/proovider-component/remoteEntry.js', // prod
           },
           shared: {
             react: { singleton: true, eager: true },

@@ -23,7 +23,7 @@ export default defineConfig({
             federation_provider:
               'federation_provider@http://localhost:3000/mf-manifest.json', // dev
 
-            // federation_provider: 'federation_provider@http://localhost/provider-components/remoteEntry.js', // prod
+           //  federation_provider: 'federation_provider@http://localhost:8080/proovider-component/remoteEntry.js', // prod
           },
           shared: {
             react: { singleton: true, eager: true },

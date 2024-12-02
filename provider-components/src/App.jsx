@@ -1,8 +1,6 @@
-
+import { ButtonComponent } from './components/Buttons/ButtonComponent';
 const App = () => {
-  return (
-   <h1>aaaa</h1>
-  );
+  return <ButtonComponent text="Hola" />;
 };
 
 export default App;

@@ -6,6 +6,14 @@ export default defineConfig({
   plugins: [pluginReact()],
   server: {
     port: 3000,
+    proxy: {
+      '/login': {
+        target: 'http://localhost:2000/',
+      },
+      '/home': {
+        target: 'http://localhost:2001/',
+      },
+    },
   },
   dev: {
     assetPrefix: true,
